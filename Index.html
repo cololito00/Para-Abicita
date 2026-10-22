@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Abi ❤️</title>
+<style>
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: #a01653;
+  background: linear-gradient(135deg, #ffe0ec, #ff9fc8);
+}
+.card {
+  max-width: 500px;
+  margin: 25px auto;
+  padding: 25px;
+  background: #ffffffdd;
+  border-radius: 25px;
+  box-shadow: 0 5px 20px #c54b8033;
+}
+h1 { color: #e52c78; }
+button {
+  padding: 14px 22px;
+  border: 0;
+  border-radius: 25px;
+  background: #e52c78;
+  color: white;
+  font-size: 16px;
+}
+#sorpresa { display: none; line-height: 1.7; }
+</style>
+</head>
+<body>
+
+<h1>❤️ Para mi Abi ❤️</h1>
+<p>Una sorpresa hecha especialmente para vos.</p>
+
+<div class="card">
+  <h2>💌 Mi carta para vos</h2>
+  <p>
+    Abi, desde que llegaste a mi vida,
+    te convertiste en alguien muy especial.
+    Quiero compartir con vos momentos hermosos,
+    risas, abrazos y recuerdos inolvidables.
+    Gracias por ser parte de mi vida.
+  </p>
+  <h2>Te amo, Abi ❤️</h2>
+  <p>Hoy y todos los días, te sigo eligiendo.</p>
+</div>
+
+<div class="card">
+  <h2>⏳ Nuestro tiempo juntos</h2>
+  <p>Desde el 2 de septiembre de 2026</p>
+  <h2 id="contador"></h2>
+</div>
+
+<div class="card">
+  <h2>🎁 Una sorpresa para vos</h2>
+  <p>Preparé esto con todo mi amor.</p>
+  <button onclick="abrirSorpresa()">
+    Abrí tu sorpresa ❤️
+  </button>
+  <p id="sorpresa">
+    Abi, si pudiera volver a empezar,
+    volvería a querer encontrarte.
+    Sos muy importante para mí y quiero
+    seguir creando recuerdos con vos.
+    <br><br>
+    Te amo muchísimo, mi Abi. ❤️
+  </p>
+</div>
+
+<div class="card">
+  <h2>🎵 Nuestra canción</h2>
+  <p>Lifetime — Chris Grey</p>
+  <p>Esta parte queda preparada para agregar la música.</p>
+</div>
+
+<p>Hecho con amor para Abi 💗</p>
+
+<script>
+function actualizarContador() {
+  const inicio = new Date(2026, 8, 2);
+  const ahora = new Date();
+  const dias = Math.floor((ahora - inicio) / 86400000);
+
+  document.getElementById("contador").textContent =
+    dias >= 0 ? dias + " días juntos ❤️" :
+    "Nuestra historia comienza pronto ❤️";
+}
+
+function abrirSorpresa() {
+  document.getElementById("sorpresa").style.display = "block";
+}
+
+actualizarContador();
+setInterval(actualizarContador, 60000);
+</script>
+
+</body>
+</html>
